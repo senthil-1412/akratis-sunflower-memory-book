@@ -1,5 +1,5 @@
 export const letter: string[] = [
- "Hi,",
+ "Dear Akrati 💙,",
  "First of all, I want to thank you so much for being such a good friend to me. Thank you for always making me smile. You make me feel happy every single day whenever I’m with you. You have changed me a lot and guided me through many situations.",
  "I still remember the first day we met. You were wearing a white formal dress and heels, and you were struggling to walk in them. At that time, I never thought that we would become such good friends. Maybe during the initial weeks, I didn’t even speak much with you. I don’t remember exactly, but I think the first text message I sent you was related to an “iron box,” I guess. Even now, when I think about it, I laugh and wonder, “Why did I send that as my first message?” I had never interacted with a girl that much before, so maybe I just didn’t know how to text properly.",
  "I never, ever thought of hurting you in any situation. But I still remember the day when I spoke very rudely to you. I really felt bad about that incident. Once again, I’m truly sorry for that.",
