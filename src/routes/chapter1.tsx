@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/chapter1")({
   head: () => ({
@@ -31,6 +31,7 @@ function Chapter1() {
             <p>I replied to that story.</p>
             <p>At that moment, neither of us knew that one simple reply would become the first page of our own story.</p>
           </div>
+          <Link to="/chapter2" className="love-btn mt-8 text-center">Turn The Page →</Link>
         </div>
       </div>
     </main>
