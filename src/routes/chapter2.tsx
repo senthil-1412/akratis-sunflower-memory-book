@@ -10,6 +10,7 @@ import laughingImg from "@/assets/memories/laughing.jpg";
 import ttImg from "@/assets/memories/tt.jpg";
 import newDishesImg from "@/assets/memories/new-dishes.jpg";
 import ludoImg from "@/assets/memories/ludo.jpg";
+import tomJerryImg from "@/assets/memories/tom-jerry.jpg";
 
 const memories = [
   ["🌻", "Things You Love", lovesImg, "You love sunflowers, chole bhature, masala dosa, veg momos, Messi, and oxidized earrings. These little things remind me of you."],
@@ -22,6 +23,7 @@ const memories = [
   ["🏓", "Our Table Tennis Memories", ttImg, "Even today, watching those old table tennis videos on my phone makes me smile. Those were some of our cutest and funniest moments."],
   ["🍜", "Trying New Dishes", newDishesImg, "You always make me try new dishes. Because of you, I've started exploring more food, and it's always fun when we try something new together."],
   ["🎲", "Ludo Fights", ludoImg, "I love our fights, especially when we play Ludo. The arguments, blaming each other, and getting annoyed over a game are always funny. Somehow, we never get tired of it!"],
+  ["🐭", "We're Like Tom & Jerry", tomJerryImg, "We fight, we chase, we annoy each other every single day — just like Tom and Jerry. But no matter what happens, we always end up back together, because that's what best friends do."],
 ] as const;
 
 export const Route = createFileRoute("/chapter2")({
