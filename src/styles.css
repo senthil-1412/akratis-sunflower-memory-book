@@ -85,3 +85,11 @@
 }
 @utility animate-float { animation: floaty 6s ease-in-out infinite; }
 @keyframes floaty { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-18px) rotate(6deg); } }
+@utility memory-img {
+  object-fit: cover;
+  animation: kenburns 16s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  from { transform: scale(1) translate(0, 0); }
+  to { transform: scale(1.14) translate(-2.5%, 2%); }
+}
