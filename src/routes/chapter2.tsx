@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const memories = [
   ["🌻", "Things You Love", "You love sunflowers, chole bhature, masala dosa, veg momos, Messi, and oxidized earrings. These little things remind me of you."],
@@ -47,6 +47,9 @@ function Chapter2() {
         <p className="mt-5 font-serif text-xl leading-[1.8] text-ink">
           I'm sorry for being rude to you in some situations. Sometimes I may not realise how I react, but I never mean to hurt you. Thanks for being patient with me even during those moments.
         </p>
+      </div>
+      <div className="mt-12 text-center">
+        <Link to="/letter" className="love-btn inline-block px-10">Read My Letter 💌</Link>
       </div>
     </main>
   );

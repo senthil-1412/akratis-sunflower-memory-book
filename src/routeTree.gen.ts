@@ -10,11 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BeginningRouteImport } from './routes/beginning'
+import { Route as BlueRouteImport } from './routes/blue'
 import { Route as Chapter2RouteImport } from './routes/chapter2'
+import { Route as LetterRouteImport } from './routes/letter'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BeginningRoute = BeginningRouteImport.update({
+  id: '/beginning',
+  path: '/beginning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlueRoute = BlueRouteImport.update({
+  id: '/blue',
+  path: '/blue',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Chapter2Route = Chapter2RouteImport.update({
@@ -22,31 +35,48 @@ const Chapter2Route = Chapter2RouteImport.update({
   path: '/chapter2',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LetterRoute = LetterRouteImport.update({
+  id: '/letter',
+  path: '/letter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/beginning': typeof BeginningRoute
+  '/blue': typeof BlueRoute
   '/chapter2': typeof Chapter2Route
+  '/letter': typeof LetterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/beginning': typeof BeginningRoute
+  '/blue': typeof BlueRoute
   '/chapter2': typeof Chapter2Route
+  '/letter': typeof LetterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/beginning': typeof BeginningRoute
+  '/blue': typeof BlueRoute
   '/chapter2': typeof Chapter2Route
+  '/letter': typeof LetterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/chapter2'
+  fullPaths: '/' | '/beginning' | '/blue' | '/chapter2' | '/letter'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chapter2'
-  id: '__root__' | '/' | '/chapter2'
+  to: '/' | '/beginning' | '/blue' | '/chapter2' | '/letter'
+  id: '__root__' | '/' | '/beginning' | '/blue' | '/chapter2' | '/letter'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BeginningRoute: typeof BeginningRoute
+  BlueRoute: typeof BlueRoute
   Chapter2Route: typeof Chapter2Route
+  LetterRoute: typeof LetterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,6 +88,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/beginning': {
+      id: '/beginning'
+      path: '/beginning'
+      fullPath: '/beginning'
+      preLoaderRoute: typeof BeginningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blue': {
+      id: '/blue'
+      path: '/blue'
+      fullPath: '/blue'
+      preLoaderRoute: typeof BlueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/chapter2': {
       id: '/chapter2'
       path: '/chapter2'
@@ -65,12 +109,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Chapter2RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/letter': {
+      id: '/letter'
+      path: '/letter'
+      fullPath: '/letter'
+      preLoaderRoute: typeof LetterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BeginningRoute: BeginningRoute,
+  BlueRoute: BlueRoute,
   Chapter2Route: Chapter2Route,
+  LetterRoute: LetterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

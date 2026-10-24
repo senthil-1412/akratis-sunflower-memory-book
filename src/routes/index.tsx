@@ -65,10 +65,10 @@ function Index() {
               className="love-btn w-full md:w-[250px]"
               onClick={() => {
                 setLeaving(true);
-                setTimeout(() => navigate({ to: "/chapter2" }), 900);
+                setTimeout(() => navigate({ to: "/beginning" }), 900);
               }}
             >
-              See Our Memories →
+              Start Our Story →
             </button>
           </div>
         </section>
