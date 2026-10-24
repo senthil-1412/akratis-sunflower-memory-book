@@ -8,6 +8,7 @@ import honestImg from "@/assets/memories/honest.jpg";
 import bestfriendImg from "@/assets/memories/bestfriend.jpg";
 import laughingImg from "@/assets/memories/laughing.jpg";
 import ttImg from "@/assets/memories/tt.jpg";
+import newDishesImg from "@/assets/memories/new-dishes.jpg";
 import ludoImg from "@/assets/memories/ludo.jpg";
 
 const memories = [
@@ -19,7 +20,7 @@ const memories = [
   ["🫂", "My Best Friend", bestfriendImg, "Out of all my friends, you are my best best friend. I'm really happy to have a friend like you in my life."],
   ["😂", "The Happiest Version of Me", laughingImg, "I think I become the happiest version of myself when I'm with you. I can be myself, laugh freely, and enjoy even the smallest moments."],
   ["🏓", "Our Table Tennis Memories", ttImg, "Even today, watching those old table tennis videos on my phone makes me smile. Those were some of our cutest and funniest moments."],
-  ["🍜", "Trying New Dishes", lovesImg, "You always make me try new dishes. Because of you, I've started exploring more food, and it's always fun when we try something new together."],
+  ["🍜", "Trying New Dishes", newDishesImg, "You always make me try new dishes. Because of you, I've started exploring more food, and it's always fun when we try something new together."],
   ["🎲", "Ludo Fights", ludoImg, "I love our fights, especially when we play Ludo. The arguments, blaming each other, and getting annoyed over a game are always funny. Somehow, we never get tired of it!"],
 ] as const;
 
