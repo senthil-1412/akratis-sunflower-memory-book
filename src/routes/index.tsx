@@ -1,5 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+import { playSong } from "@/components/MusicPlayer";
 
 const PASSWORD = "sunflower";
 
@@ -26,6 +27,7 @@ function Index() {
   const unlock = () => {
     if (value !== PASSWORD) return setError("❌ Wrong Password");
     setError("");
+    playSong();
     setFading(true);
     setTimeout(() => setUnlocked(true), 800);
   };
