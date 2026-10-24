@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Chapter1RouteImport } from './routes/chapter1'
+import { Route as Chapter2RouteImport } from './routes/chapter2'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const Chapter1Route = Chapter1RouteImport.update({
   path: '/chapter1',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Chapter2Route = Chapter2RouteImport.update({
+  id: '/chapter2',
+  path: '/chapter2',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chapter1': typeof Chapter1Route
+  '/chapter2': typeof Chapter2Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chapter1': typeof Chapter1Route
+  '/chapter2': typeof Chapter2Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chapter1': typeof Chapter1Route
+  '/chapter2': typeof Chapter2Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/chapter1'
+  fullPaths: '/' | '/chapter1' | '/chapter2'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chapter1'
-  id: '__root__' | '/' | '/chapter1'
+  to: '/' | '/chapter1' | '/chapter2'
+  id: '__root__' | '/' | '/chapter1' | '/chapter2'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   Chapter1Route: typeof Chapter1Route
+  Chapter2Route: typeof Chapter2Route
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Chapter1RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/chapter2': {
+      id: '/chapter2'
+      path: '/chapter2'
+      fullPath: '/chapter2'
+      preLoaderRoute: typeof Chapter2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   Chapter1Route: Chapter1Route,
+  Chapter2Route: Chapter2Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
