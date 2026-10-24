@@ -80,3 +80,8 @@
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@utility blue-bg {
+  background: radial-gradient(circle at 20% 10%, oklch(0.55 0.15 245), transparent 50%), radial-gradient(circle at 80% 90%, oklch(0.45 0.16 260), transparent 55%), linear-gradient(160deg, oklch(0.25 0.08 255), oklch(0.18 0.06 260));
+}
+@utility animate-float { animation: floaty 6s ease-in-out infinite; }
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-18px) rotate(6deg); } }
