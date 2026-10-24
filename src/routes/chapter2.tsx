@@ -29,8 +29,8 @@ function Chapter2() {
   return (
     <main className="paper-bg min-h-screen px-4 py-16">
       <div className="animate-fade-up mx-auto max-w-5xl text-center">
-        <span className="text-[13px] uppercase tracking-[3px] text-ink-muted">Our Memories</span>
-        <h1 className="my-4 font-serif text-[42px] font-bold text-ink md:text-[60px]">For Akrati Sharma</h1>
+        <span className="text-[13px] uppercase tracking-[3px] text-foreground/80">Our Memories</span>
+        <h1 className="my-4 font-serif text-[42px] font-bold text-foreground md:text-[60px]">For Akrati Sharma</h1>
         <div className="mx-auto h-[3px] w-[90px] bg-primary" />
       </div>
       <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
