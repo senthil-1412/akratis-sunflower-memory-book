@@ -21,8 +21,8 @@ function Letter() {
       {!open ? (
         <button onClick={() => setOpen(true)} className="animate-fade-up group text-center">
           <div className="animate-heartbeat text-[110px]">💌</div>
-          <p className="mt-4 font-serif text-3xl font-bold text-ink">A letter for you</p>
-          <p className="mt-2 text-ink-muted">Tap to open</p>
+          <p className="mt-4 font-serif text-3xl font-bold text-foreground">A letter for you</p>
+          <p className="mt-2 text-foreground/80">Tap to open</p>
         </button>
       ) : (
         <article className="animate-fade-up w-full max-w-3xl rounded-2xl bg-paper p-8 shadow-2xl md:p-14">
