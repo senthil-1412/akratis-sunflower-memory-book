@@ -1,15 +1,15 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-const PASSWORD = "14092024";
+const PASSWORD = "sunflower";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Our Story ❤️ — Welcome My Love" },
-      { name: "description", content: "Every beautiful story begins with one simple moment." },
+      { title: "Our Story ❤️ — Hey Akrati 🌻" },
+      { name: "description", content: "A little something made just for you." },
       { property: "og:title", content: "Our Story ❤️" },
-      { property: "og:description", content: "Every beautiful story begins with one simple moment." },
+      { property: "og:description", content: "A little something made just for you." },
     ],
   }),
   component: Index,
@@ -21,25 +21,22 @@ function Index() {
   const [leaving, setLeaving] = useState(false);
   const [value, setValue] = useState("");
   const [error, setError] = useState("");
-  const audio = useRef<HTMLAudioElement>(null);
   const navigate = useNavigate();
 
   const unlock = () => {
     if (value !== PASSWORD) return setError("❌ Wrong Password");
     setError("");
-    audio.current?.play().catch(console.log);
     setFading(true);
     setTimeout(() => setUnlocked(true), 800);
   };
 
   return (
     <main className={`photo-bg flex h-screen items-center justify-center overflow-hidden transition-opacity duration-1000 ${leaving ? "opacity-0" : ""}`}>
-      <audio ref={audio} src="/music/oursong.mp3" loop />
       {!unlocked ? (
         <section className={`glass-card animate-fade-up w-[90%] max-w-[430px] rounded-[25px] p-[45px] text-center transition-opacity duration-1000 ${fading ? "opacity-0" : ""}`}>
-          <div className="animate-heartbeat text-[70px]">❤️</div>
-          <h1 className="mt-4 text-[38px] font-bold leading-tight">Welcome My Love</h1>
-          <p className="mt-4 leading-[1.8] opacity-95">Every beautiful story begins with one simple moment.</p>
+          <div className="animate-heartbeat text-[70px]">🌻</div>
+          <h1 className="mt-4 text-[38px] font-bold leading-tight">Hey Akrati 🌻</h1>
+          <p className="mt-4 leading-[1.8] opacity-95">A little something made just for you.</p>
           <input
             type="password"
             value={value}
@@ -48,30 +45,30 @@ function Index() {
             placeholder="Enter Our Secret Password"
             className="mt-[30px] w-full rounded-[15px] bg-glass p-[15px] text-[17px] text-foreground outline-none placeholder:text-foreground"
           />
-          <button onClick={unlock} className="love-btn mt-[25px] w-full">Unlock Our Story ❤️</button>
+          <button onClick={unlock} className="love-btn mt-[25px] w-full">Open It 🌻</button>
           {error && <p className="mt-5 font-semibold text-error-soft">{error}</p>}
         </section>
       ) : (
         <section className="glass-card animate-fade-up w-[90%] max-w-[900px] rounded-[30px] p-10 text-center md:p-[70px]">
-          <h1 className="text-[45px] font-bold md:text-[70px]">Our Story ❤️</h1>
-          <p className="mt-5 text-lg leading-[1.7] md:text-2xl">Every memory with you became my favorite chapter.</p>
+          <h1 className="text-[45px] font-bold md:text-[70px]">Our Memories 🌻</h1>
+          <p className="mt-5 text-lg leading-[1.7] md:text-2xl">Chai, Ludo fights, momos and a lot of laughter — this is for my best best friend.</p>
           <div className="mt-10 flex flex-col items-center justify-center gap-6 md:flex-row">
             <button
               className="love-btn w-full md:w-[250px]"
               onClick={() =>
-                alert("Dear momo if ur seeing this today is 16.08.2026 and we had our first conversation on snapchat today and I still love you to moon and back")
+                alert("Akrati, thank you for being my best best friend. You make me the happiest version of myself 🌻")
               }
             >
-              Click Me ❤️
+              Click Me 🌻
             </button>
             <button
               className="love-btn w-full md:w-[250px]"
               onClick={() => {
                 setLeaving(true);
-                setTimeout(() => navigate({ to: "/chapter1" }), 900);
+                setTimeout(() => navigate({ to: "/chapter2" }), 900);
               }}
             >
-              Begin Our Journey →
+              See Our Memories →
             </button>
           </div>
         </section>

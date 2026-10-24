@@ -16,9 +16,9 @@ const memories = [
 export const Route = createFileRoute("/chapter2")({
   head: () => ({
     meta: [
-      { title: "Chapter Two — For Akrati Sharma" },
+      { title: "Our Memories — For Akrati Sharma" },
       { name: "description", content: "Little things, big memories — for Akrati." },
-      { property: "og:title", content: "Chapter Two — For Akrati Sharma" },
+      { property: "og:title", content: "Our Memories — For Akrati Sharma" },
       { property: "og:description", content: "Little things, big memories — for Akrati." },
     ],
   }),
@@ -29,7 +29,7 @@ function Chapter2() {
   return (
     <main className="paper-bg min-h-screen px-4 py-16">
       <div className="animate-fade-up mx-auto max-w-5xl text-center">
-        <span className="text-[13px] uppercase tracking-[3px] text-ink-muted">Chapter Two</span>
+        <span className="text-[13px] uppercase tracking-[3px] text-ink-muted">Our Memories</span>
         <h1 className="my-4 font-serif text-[42px] font-bold text-ink md:text-[60px]">For Akrati Sharma</h1>
         <div className="mx-auto h-[3px] w-[90px] bg-primary" />
       </div>
