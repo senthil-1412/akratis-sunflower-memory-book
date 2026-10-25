@@ -22,20 +22,20 @@
 }
 
 :root {
-  --background: oklch(0.15 0 0);
-  --foreground: oklch(1 0 0);
-  --primary: oklch(0.68 0.2 0);
-  --primary-hover: oklch(0.62 0.24 5);
-  --primary-foreground: oklch(1 0 0);
-  --glass: oklch(1 0 0 / 12%);
-  --glass-border: oklch(1 0 0 / 25%);
+  --background: oklch(0.62 0.14 78);
+  --foreground: oklch(0.99 0.01 90);
+  --primary: oklch(0.74 0.16 82);
+  --primary-hover: oklch(0.68 0.17 76);
+  --primary-foreground: oklch(0.28 0.07 70);
+  --glass: oklch(1 0 0 / 14%);
+  --glass-border: oklch(1 0 0 / 30%);
   --error-soft: oklch(0.9 0.05 20);
-  --paper: oklch(0.98 0.015 240);
-  --paper-left: oklch(0.95 0.03 240);
-  --ink: oklch(0.28 0.06 255);
-  --ink-soft: oklch(0.4 0.05 250);
-  --ink-muted: oklch(0.55 0.05 245);
-  --border: oklch(0.88 0 0);
+  --paper: oklch(0.98 0.03 90);
+  --paper-left: oklch(0.95 0.05 85);
+  --ink: oklch(0.35 0.07 70);
+  --ink-soft: oklch(0.45 0.06 68);
+  --ink-muted: oklch(0.55 0.07 75);
+  --border: oklch(0.88 0.03 85);
 }
 
 @layer base {
@@ -43,16 +43,16 @@
 }
 
 @utility photo-bg {
-  background: linear-gradient(oklch(0 0 0 / 45%), oklch(0 0 0 / 45%)), url("/images/background.jpg") center / cover no-repeat;
+  background: linear-gradient(oklch(0.4 0.06 70 / 55%), oklch(0.35 0.06 65 / 55%)), url("/images/background.jpg") center / cover no-repeat;
 }
 @utility paper-bg {
-  background: radial-gradient(circle at 20% 10%, oklch(0.55 0.15 245), transparent 50%), radial-gradient(circle at 80% 90%, oklch(0.45 0.16 260), transparent 55%), linear-gradient(160deg, oklch(0.25 0.08 255), oklch(0.18 0.06 260));
+  background: radial-gradient(circle at 20% 10%, oklch(0.86 0.12 88), transparent 50%), radial-gradient(circle at 80% 90%, oklch(0.8 0.13 80), transparent 55%), linear-gradient(160deg, oklch(0.74 0.13 84), oklch(0.62 0.14 76));
 }
 @utility glass-card {
   background: var(--glass);
   backdrop-filter: blur(18px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 25px 60px oklch(0 0 0 / 45%);
+  box-shadow: 0 25px 60px oklch(0.35 0.07 70 / 40%);
 }
 @utility love-btn {
   background: var(--primary);
@@ -81,7 +81,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 @utility blue-bg {
-  background: radial-gradient(circle at 20% 10%, oklch(0.55 0.15 245), transparent 50%), radial-gradient(circle at 80% 90%, oklch(0.45 0.16 260), transparent 55%), linear-gradient(160deg, oklch(0.25 0.08 255), oklch(0.18 0.06 260));
+  background: radial-gradient(circle at 20% 10%, oklch(0.86 0.12 88), transparent 50%), radial-gradient(circle at 80% 90%, oklch(0.8 0.13 80), transparent 55%), linear-gradient(160deg, oklch(0.74 0.13 84), oklch(0.62 0.14 76));
 }
 @utility animate-float { animation: floaty 6s ease-in-out infinite; }
 @keyframes floaty { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-18px) rotate(6deg); } }

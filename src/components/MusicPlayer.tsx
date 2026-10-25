@@ -33,7 +33,7 @@ export function MusicPlayer() {
         else a.pause();
       }}
       aria-label={playing ? "Pause song" : "Play song"}
-      className="glass-card fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-foreground"
+      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-paper px-4 py-3 text-sm font-medium text-ink shadow-xl ring-1 ring-black/5"
     >
       <span className={playing ? "animate-heartbeat" : ""}>{playing ? "🎵" : "▶️"}</span>
       {playing ? "Tum Se Hi" : "Play our song"}

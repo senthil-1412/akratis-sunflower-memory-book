@@ -31,7 +31,7 @@ function Letter() {
               <p key={i} className={i === 0 ? "text-3xl font-bold text-ink" : i === letter.length - 1 ? "text-xl italic text-ink" : ""}>{p}</p>
             ))}
           </div>
-          <p className="mt-10 text-right font-serif text-xl text-primary">— with love, always 🌻</p>
+          <p className="mt-10 text-right font-serif text-2xl font-bold text-ink">— Senthil</p>
           <div className="mt-10 text-center">
             <Link to="/" className="love-btn inline-block px-10">Back to Start 🌻</Link>
           </div>
